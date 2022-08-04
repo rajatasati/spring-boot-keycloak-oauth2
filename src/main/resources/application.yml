@@ -1,0 +1,22 @@
+server:
+  port: 9090
+  
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:empdb
+    username: sa
+    password: sa
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    
+keycloak:
+  realm: javatechie
+  auth-server-url: http://localhost:8080/
+  resource: springboot-keycloak
+  public-client: true
+  bearer-only: true
+  
